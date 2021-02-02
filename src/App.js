@@ -32,56 +32,52 @@ const onSearchClick=()=>{
 
   }
 
-// if(query.year&&query.category&&query.province){
-//   filterTable = rawData.filter(obj =>  obj.EnterDate.toLowerCase().includes(query.year)&&
-//   obj.City===query.province&&obj.Enable===query.category);
-//    console.log(filterTable);
-// setFilterTable(filterTable)
+if(query.year&&query.category&&query.province){
+  filterTable = rawData.filter(obj =>  obj.EnterDate.toLowerCase().includes(query.year)&&
+  obj.City===query.province&&obj.Enable===query.category);
+   console.log(filterTable);
+setFilterTable(filterTable)
 
-// }
-// else if(query.year&&query.category){
-//   filterTable = rawData.filter(obj =>  obj.EnterDate.toLowerCase().includes(query.year)&&
-//   obj.Enable===query.category);
-//    console.log(filterTable);
-// setFilterTable(filterTable)
-// }
-// else if(query.year&&query.province){
-//   filterTable = rawData.filter(obj =>  obj.EnterDate.toLowerCase().includes(query.year)&&
-//   obj.City===query.province);
-//    console.log(filterTable);
-// setFilterTable(filterTable)
+}
+else if(query.year&&query.category){
+  filterTable = rawData.filter(obj =>  obj.EnterDate.toLowerCase().includes(query.year)&&
+  obj.Enable===query.category);
+   console.log(filterTable);
+setFilterTable(filterTable)
+}
+else if(query.year&&query.province){
+  filterTable = rawData.filter(obj =>  obj.EnterDate.toLowerCase().includes(query.year)&&
+  obj.City===query.province);
+   console.log(filterTable);
+setFilterTable(filterTable)
 
-// }
-// else if(query.province && query.category){
-//   filterTable = rawData.filter(obj =>  
-//   obj.City===query.province && obj.Enable===query.category);
-//    console.log(filterTable);
-// setFilterTable(filterTable)
-// }
+}
+else if(query.province && query.category){
+  filterTable = rawData.filter(obj =>  
+  obj.City===query.province && obj.Enable===query.category);
+   console.log(filterTable);
+setFilterTable(filterTable)
+}
 
-// else if(query.category){
-//   filterTable = rawData.filter(obj =>  
-//     obj.Enable===query.category);
+else if(query.category){
+  filterTable = rawData.filter(obj =>  
+    obj.Enable===query.category);
      
-//   setFilterTable(filterTable)
-// }
-// else if(query.province){
-//   filterTable = rawData.filter(obj =>  
-//     obj.City===query.province);
-//   setFilterTable(filterTable)
-// }
-// else if (query.year){
-//   filterTable = rawData.filter(obj =>  obj.EnterDate.toLowerCase().includes(query.year));
-//   setFilterTable(filterTable)
-// }else{
-//   setFilterTable(rawData);
-// }
+  setFilterTable(filterTable)
+}
+else if(query.province){
+  filterTable = rawData.filter(obj =>  
+    obj.City===query.province);
+  setFilterTable(filterTable)
+}
+else if (query.year){
+  filterTable = rawData.filter(obj =>  obj.EnterDate.toLowerCase().includes(query.year));
+  setFilterTable(filterTable)
+}else{
+  setFilterTable(rawData);
+}
 
-  console.log(query.province&&query.year&&query.category,"Check check check");
-  filterTable = rawData.filter(obj => query.year? obj.EnterDate.toLowerCase().includes(query.year):1&&
-  query.province?obj.City===query.province:1&&query.category?obj.Enable===query.category:1);
-  console.log(filterTable);
-
+ 
   
   }
 
